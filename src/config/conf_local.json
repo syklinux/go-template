@@ -1,0 +1,42 @@
+{
+    "port": "9999",
+    "log": {
+      "type": "std",
+      "level": "DEBUG",
+      "dir": "./logs",
+      "filename": "go_template.log",
+      "rotateByHour": true,
+      "keepBays": 5
+    },
+    "mysql": {
+      "WriteServer": "127.0.0.1:3306",
+      "ReadServer": [
+        "127.0.0.1:3306"
+      ],
+      "User": "root",
+      "Password": "123456",
+      "DataBase": "db_name",
+      "logLevel": "DEBUG",
+      "MaxIdleTime": 3600,
+      "MaxLiftTime": 3600,
+      "MaxIdleConn": 5,
+      "MaxOpenConn": 50
+    },
+    "redisConf": {
+      "Addr": "127.0.0.1:6379",
+      "Password": "123456",
+      "Db": 0
+    },
+    "httConf": {
+      "addr": "0.0.0.0",
+      "read_timeout": 60,
+      "write_timeout": 60,
+      "allow_ip": ["0.0.0.0"],
+      "cors": [""]
+    },
+    "tokenConfig": {
+      "ExpiresAt": 604800,
+      "SecureKey": "4vR2EuspuhZPYfCHXk6Eosn3f6H74AWJ",
+      "PadKey": "46cc793c53dc451b"
+    }
+  }
